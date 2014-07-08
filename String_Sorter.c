@@ -38,7 +38,9 @@ int main (int argc, char *argv[]){
 
     printf ("Insert string:\n");
     fgets (string_input, MAXSTR, stdin);
+    printf("Length: %zu\n", strlen(string_input));
     del_enter (string_input);
+    printf("Length: %zu\n", strlen(string_input));
     sort_up (string_input);
     printf ("String ordenada: %s\n", string_input);
     free (string_input);
