@@ -22,7 +22,7 @@ void sort_up (char *string){
             if (*(string + j) > *(string + 1 + j)){
                 ch_aux = *(string + j);
                 *(string + j) = *(string + 1 + j);
-                *(string + 1 + k) = ch_aux;
+                *(string + 1 + j) = ch_aux;
             }
         }  
     }
