@@ -18,7 +18,7 @@ void sort_up (char *string){
     char ch_aux;
     
     for (i = 0; i < strlen(string); i++){
-        for (j = 0; j < (strlen(string) - 1) - i, j++){
+        for (j = 0; j < (strlen(string) - 1) - i; j++){
             if (*(string + j) > *(string + 1 + j)){
                 ch_aux = *(string + j);
                 *(string + j) = *(string + 1 + j);
