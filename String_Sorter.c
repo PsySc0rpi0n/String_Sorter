@@ -57,18 +57,18 @@ int main (int argc, char *argv[]){
     fgets (string_input, MAXSTR, stdin);
     del_enter (string_input);
     printf ("Como deseja ordenar a string? (C)rescente ou (D)ecrescente?\n");
-    CLEAR_INPUT;
     do{
         switch (tolower(opt = fgetc(stdin))) {
             case 'c': sort_up (string_input);
                       break;
             case 'd': sort_down (string_input);
                       break;
-            default: printf("Escolha \"c\" para ordem crescente ou \"d\" para ordem decrescente!\n");
-                     printf ("Letra: %c\t ASCII: %d\n", opt, opt);
-                     break;
+            default:  printf("Escolha \"c\" para ordem crescente ou \"d\" para ordem decrescente!\n");
+                      printf ("Letra: %c\t ASCII: %d\n", opt, opt);
+                      break;
         }
-    }while (opt != 'c' || opt != 'd');
+        CLEAR_INPUT;
+    }while (opt != 'c' && opt != 'd');
     printf ("String ordenada: %s\n", string_input);
     free (string_input);
 return 0;   
