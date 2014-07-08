@@ -14,16 +14,17 @@ return 0;
 }
 
 void sort_up (char *string){
-    char ch;
-    unsigned int i;
+    unsigned int i, j;
+    char ch_aux;
     
-    ch = *string;
     for (i = 0; i < strlen(string); i++){
-        if (*(string + 1 + i) <= ch){
-            ch = *(string + i);
-            *(string + 1 + i) = *(string + i);
-            *(string + i) = ch;
-        }
+        for (j = 0; j < (strlen(string) - 1) - i, j++){
+            if (*(string + j) > *(string + 1 + j)){
+                ch_aux = *(string + j);
+                *(string + j) = *(string + 1 + j);
+                *(string + 1 + k) = ch_aux;
+            }
+        }  
     }
 }
 
