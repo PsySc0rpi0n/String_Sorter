@@ -15,14 +15,14 @@ return 0;
 
 void sort_up (char *string){
     unsigned int i, j;
-    char ch_aux;
+    char ch_tmp;
     
     for (i = 0; i < strlen(string); i++){
         for (j = 0; j < (strlen(string) - 1) - i; j++){
             if (*(string + j) > *(string + 1 + j)){
-                ch_aux = *(string + j);
+                ch_tmp = *(string + j);
                 *(string + j) = *(string + 1 + j);
-                *(string + 1 + j) = ch_aux;
+                *(string + 1 + j) = ch_tmp;
             }
         }  
     }
@@ -38,9 +38,7 @@ int main (int argc, char *argv[]){
 
     printf ("Insert string:\n");
     fgets (string_input, MAXSTR, stdin);
-    printf("Length: %zu\n", strlen(string_input));
     del_enter (string_input);
-    printf("Length: %zu\n", strlen(string_input));
     sort_up (string_input);
     printf ("String ordenada: %s\n", string_input);
     free (string_input);
