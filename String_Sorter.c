@@ -65,6 +65,7 @@ int main (int argc, char *argv[]){
             case 'd': sort_down (string_input);
                       break;
             default: printf("Escolha \"c\" para ordem crescente ou \"d\" para ordem decrescente!\n");
+                     printf ("Letra: %c\t ASCII: %d\n", opt, opt);
                      break;
         }
     }while (opt != 'c' || opt != 'd');
